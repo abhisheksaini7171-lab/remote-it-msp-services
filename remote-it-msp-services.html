@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08111f">
+
+  <title>Remote IT Engineer | Azure, Microsoft 365 & MSP Support | Abhishek Saini</title>
+  <meta name="description" content="Remote IT infrastructure and cloud engineer supporting MSPs and businesses with Azure, AWS, Google Cloud, Microsoft 365, Windows Server, migrations, networking, security and RMM projects.">
+  <meta name="author" content="Abhishek Saini">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Remote IT Engineer | Azure, Microsoft 365 & MSP Support">
+  <meta property="og:description" content="Remote IT infrastructure, cloud, MSP and migration support for businesses and technology teams.">
+  <meta property="og:url" content="https://abhisheksaini7171-lab.github.io/remote-it-msp-services/">
+
+  <style>
+    :root{
+      --bg:#07101d;
+      --bg2:#0b1626;
+      --panel:rgba(255,255,255,.045);
+      --panel2:rgba(255,255,255,.065);
+      --text:#eef5ff;
+      --muted:#9eacc0;
+      --line:rgba(255,255,255,.10);
+      --accent:#5da9ff;
+      --accent2:#7c6cff;
+      --green:#48d597;
+      --shadow:0 24px 70px rgba(0,0,0,.30);
+      --radius:24px;
+      --max:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 0%,rgba(67,135,255,.16),transparent 28%),
+        radial-gradient(circle at 90% 10%,rgba(124,108,255,.12),transparent 25%),
+        linear-gradient(180deg,var(--bg),#050b14 100%);
+      line-height:1.6;
+    }
+
+    a{color:inherit}
+    img{max-width:100%}
+    .container{width:min(calc(100% - 40px),var(--max));margin:auto}
+    .section{padding:92px 0;scroll-margin-top:30px}
+    .section-heading{max-width:760px;margin-bottom:42px}
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:12px;
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.14em;
+      color:#79b8ff;
+    }
+    h1,h2,h3{line-height:1.12;margin-top:0}
+    h1{font-size:clamp(2.8rem,7vw,5.8rem);letter-spacing:-.055em;margin-bottom:24px}
+    h2{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.04em;margin-bottom:16px}
+    h3{font-size:1.2rem}
+    p{color:var(--muted)}
+    .lead{font-size:clamp(1rem,2vw,1.2rem);max-width:720px}
+    .small{font-size:.86rem;color:var(--muted)}
+
+    .nav{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(5,11,20,.72);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav-inner{
+      min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px
+    }
+    .brand{font-weight:900;letter-spacing:-.03em;text-decoration:none}
+    .brand span{color:#70b6ff}
+    .nav-links{display:flex;gap:22px;align-items:center}
+    .nav-links a{font-size:.9rem;text-decoration:none;color:#b9c6d8}
+    .nav-links a:hover{color:white}
+    .nav-cta{padding:10px 15px;border:1px solid var(--line);border-radius:12px!important;color:white!important}
+    .mobile-nav{display:none}
+
+    .hero{padding:105px 0 80px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+    .hero-copy .kicker{
+      display:inline-flex;gap:9px;align-items:center;
+      padding:8px 12px;border:1px solid var(--line);border-radius:999px;
+      background:rgba(255,255,255,.035);font-size:.75rem;font-weight:800;letter-spacing:.1em
+    }
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 20px var(--green)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      min-height:48px;padding:0 18px;border-radius:13px;
+      text-decoration:none;font-weight:800;border:1px solid var(--line);
+      transition:.25s ease;cursor:pointer;font-family:inherit
+    }
+    .btn-primary{background:linear-gradient(135deg,#62b4ff,#7169ff);border-color:transparent;color:white}
+    .btn-secondary{background:rgba(255,255,255,.045)}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+    .proof-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+    .proof{
+      padding:8px 11px;border:1px solid var(--line);border-radius:999px;
+      color:#bdc9da;font-size:.78rem;background:rgba(255,255,255,.025)
+    }
+
+    .hero-visual{
+      min-height:420px;position:relative;display:grid;place-items:center
+    }
+    .orb{
+      width:320px;height:320px;border-radius:50%;
+      background:
+        radial-gradient(circle at 35% 30%,rgba(116,194,255,.95),rgba(81,91,255,.25) 34%,transparent 65%),
+        radial-gradient(circle,rgba(81,135,255,.18),transparent 68%);
+      filter:blur(.2px);
+      box-shadow:0 0 100px rgba(73,137,255,.18);
+      animation:float 6s ease-in-out infinite;
+    }
+    .orbit{position:absolute;border:1px solid rgba(100,170,255,.18);border-radius:50%;transform:rotate(-18deg)}
+    .orbit.one{width:410px;height:180px}.orbit.two{width:450px;height:240px;transform:rotate(38deg)}
+    .node{
+      position:absolute;padding:12px 14px;border:1px solid var(--line);
+      border-radius:15px;background:rgba(7,16,29,.82);backdrop-filter:blur(12px);
+      box-shadow:var(--shadow);font-size:.8rem;font-weight:800
+    }
+    .node.azure{top:8%;right:8%}.node.m365{bottom:10%;left:3%}.node.msp{top:43%;left:0}.node.cloud{bottom:5%;right:3%}
+
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .metric{
+      padding:25px;border:1px solid var(--line);border-radius:20px;
+      background:var(--panel);transition:.25s ease
+    }
+    .metric:hover{transform:translateY(-5px);background:var(--panel2)}
+    .metric strong{display:block;font-size:2rem;letter-spacing:-.05em}
+    .metric span{color:var(--muted);font-size:.85rem}
+
+    .architecture{
+      display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:28px
+    }
+    .arch-card{
+      padding:20px;border:1px solid var(--line);border-radius:20px;background:var(--panel);
+      min-height:140px;display:flex;flex-direction:column;justify-content:space-between;
+      transition:.25s ease
+    }
+    .arch-card:hover{transform:translateY(-5px);border-color:rgba(100,170,255,.35)}
+    .arch-card strong{font-size:.95rem}.arch-card span{font-size:.78rem;color:var(--muted)}
+
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .card{
+      padding:28px;border:1px solid var(--line);border-radius:var(--radius);
+      background:var(--panel);transition:.25s ease
+    }
+    .card:hover{transform:translateY(-5px);border-color:rgba(100,170,255,.28)}
+    .card-icon{font-size:1.5rem;margin-bottom:16px}
+    ul{margin:15px 0 0;padding-left:20px}
+    li{margin:7px 0;color:#c6d1df}
+
+    .why-grid,.project-grid,.engagement-grid,.audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .why-card,.project-card,.engagement-card,.audience-card{
+      padding:24px;border:1px solid var(--line);border-radius:20px;background:var(--panel)
+    }
+    .why-card strong,.project-card strong,.engagement-card strong{display:block;margin-bottom:10px}
+    .check{color:var(--green);font-weight:900;margin-right:7px}
+
+    .company-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .company-card{
+      display:flex;flex-direction:column;padding:26px;border:1px solid var(--line);
+      border-radius:22px;background:var(--panel);transition:.25s ease
+    }
+    .company-card:hover{transform:translateY(-5px);border-color:rgba(100,170,255,.28)}
+    .company-logo-wrap{
+      height:86px;display:flex;align-items:center;justify-content:flex-start;
+      padding:14px 18px;border-radius:16px;background:rgba(255,255,255,.96);
+      margin-bottom:20px;overflow:hidden
+    }
+    .company-wordmark{
+      color:#14243b;font-weight:900;font-size:1.42rem;letter-spacing:-.045em;
+      line-height:1.02;display:flex;flex-direction:column;justify-content:center
+    }
+    .company-wordmark small{
+      display:block;font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;
+      opacity:.58;margin-top:7px;font-weight:800
+    }
+    .brand-mark{
+      display:inline-flex;align-items:center;gap:10px
+    }
+    .brand-symbol{
+      width:34px;height:34px;border-radius:9px;display:inline-grid;place-items:center;
+      background:#14243b;color:white;font-size:.72rem;font-weight:950;letter-spacing:-.04em;
+      flex:0 0 34px
+    }
+    .brand-symbol.blue{background:#1687d9}
+    .brand-symbol.dark{background:#182b45}
+    .brand-symbol.purple{background:#4b3f8f}
+    .brand-symbol.green{background:#1d7d67}
+    .company-content h3{margin-bottom:5px}
+    .company-role{font-size:.74rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#7fbaff}
+    .company-link{display:inline-block;margin-top:15px;color:#82bdff;text-decoration:none;font-weight:800;font-size:.84rem}
+    .disclaimer{text-align:center;max-width:850px;margin:24px auto 0;font-size:.76rem;color:#748398}
+
+    .migration{
+      display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:14px
+    }
+    .mig-node{padding:28px;border:1px solid var(--line);border-radius:22px;background:var(--panel)}
+    .mig-node strong{display:block;margin-bottom:12px}
+    .arrow{display:grid;place-items:center;color:#6fb7ff;font-size:1.8rem}
+
+    .network{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:30px 0}
+    .network div{padding:20px;text-align:center;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+    .network strong{display:block;margin-bottom:6px}
+
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .step{padding:26px;border:1px solid var(--line);border-radius:22px;background:var(--panel)}
+    .step-number{font-size:.75rem;font-weight:900;color:#74b8ff;letter-spacing:.12em}
+
+    .tags{display:flex;flex-wrap:wrap;gap:9px}
+    .tag{padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-size:.8rem;color:#c5d1df}
+
+    .certification-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .cert-card{
+      overflow:hidden;border:1px solid var(--line);border-radius:22px;background:var(--panel);
+      transition:.25s ease
+    }
+    .cert-card:hover{transform:translateY(-6px);border-color:rgba(100,170,255,.3)}
+    .cert-badge-area{
+      min-height:185px;display:grid;place-items:center;
+      background:radial-gradient(circle,rgba(55,128,255,.22),transparent 68%)
+    }
+    .cert-badge{
+      width:128px;height:128px;border-radius:50%;display:flex;flex-direction:column;
+      align-items:center;justify-content:center;text-align:center;
+      border:3px solid #4d9dff;background:#0a1930;
+      box-shadow:0 0 0 7px rgba(77,157,255,.08),0 18px 40px rgba(0,0,0,.25)
+    }
+    .cert-badge span{font-size:.52rem;font-weight:900;letter-spacing:.09em;opacity:.78}
+    .cert-badge strong{font-size:1.4rem;margin:6px 0 2px}
+    .cert-body{padding:24px}
+    .cert-provider{font-size:.66rem;font-weight:900;letter-spacing:.1em;color:#7fbaff}
+    .cert-body h3{margin:9px 0;font-size:1.15rem}
+    .cert-body p{font-size:.88rem}
+    .cert-link{display:inline-block;margin-top:8px;color:#84c0ff;text-decoration:none;font-weight:800}
+    .cert-link:hover{text-decoration:underline}
+
+    .about{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:stretch
+    }
+    .about-card,.about-meta{
+      padding:30px;border:1px solid var(--line);border-radius:24px;background:var(--panel)
+    }
+    .about-meta{display:grid;gap:1px;padding:0;overflow:hidden}
+    .about-meta div{padding:24px;border-bottom:1px solid var(--line)}
+    .about-meta div:last-child{border-bottom:0}
+    .about-meta span{display:block;color:#728198;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+    .about-meta strong{display:block;margin-top:7px}
+
+    .contact-wrap{
+      display:grid;grid-template-columns:.75fr 1.25fr;gap:22px;align-items:start
+    }
+    .contact-card,.form-card{
+      padding:30px;border:1px solid var(--line);border-radius:24px;background:var(--panel)
+    }
+    .contact-list{display:grid;gap:12px;margin-top:24px}
+    .contact-item{
+      display:block;padding:14px;border:1px solid var(--line);border-radius:15px;
+      text-decoration:none;background:rgba(255,255,255,.025)
+    }
+    .contact-item strong{display:block}.contact-item span{color:var(--muted);font-size:.83rem}
+
+    form{display:grid;gap:15px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{font-size:.78rem;font-weight:800;color:#cbd7e6}
+    input,textarea,select{
+      width:100%;margin-top:7px;padding:13px 14px;border-radius:12px;
+      border:1px solid var(--line);background:#081321;color:white;
+      outline:none;font:inherit
+    }
+    input:focus,textarea:focus,select:focus{border-color:#559fff;box-shadow:0 0 0 3px rgba(85,159,255,.1)}
+    textarea{min-height:130px;resize:vertical}
+    .check-grid{display:flex;flex-wrap:wrap;gap:9px}
+    .check-option{
+      display:flex;align-items:center;gap:7px;padding:8px 10px;border:1px solid var(--line);
+      border-radius:999px;background:rgba(255,255,255,.025);font-size:.76rem;color:#bac7d7
+    }
+    .check-option input{width:auto;margin:0}
+    .form-note{font-size:.74rem;color:#758399;margin:0}
+    .success{display:none;padding:12px;border:1px solid rgba(72,213,151,.3);border-radius:12px;color:#8be7bd;background:rgba(72,213,151,.07)}
+
+    footer{padding:35px 0 55px;border-top:1px solid var(--line);color:#748398;font-size:.8rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+    .reveal{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease} body.reveal-ready .reveal{opacity:0;transform:translateY(18px)} body.reveal-ready .reveal.visible{opacity:1;transform:none}
+    .reveal.visible{opacity:1;transform:none}
+
+    @keyframes float{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-16px)}
+    }
+
+    @media(max-width:980px){
+      .hero-grid,.about,.contact-wrap{grid-template-columns:1fr}
+      .hero-visual{min-height:330px}
+      .metrics{grid-template-columns:repeat(2,1fr)}
+      .architecture{grid-template-columns:repeat(3,1fr)}
+      .why-grid,.project-grid,.engagement-grid,.audience-grid{grid-template-columns:repeat(2,1fr)}
+      .certification-grid{grid-template-columns:1fr}
+      .cert-card{max-width:600px;margin:auto;width:100%}
+    }
+
+    @media(max-width:760px){
+      .container{width:min(calc(100% - 28px),var(--max))}
+      .section{padding:70px 0}
+      .nav-links{display:none}
+      .mobile-nav{display:block;font-size:1.4rem}
+      .hero{padding-top:70px}
+      h1{font-size:clamp(2.5rem,13vw,4.2rem)}
+      .metrics,.cards,.company-grid,.why-grid,.project-grid,.engagement-grid,.audience-grid,.steps,.network,.migration{grid-template-columns:1fr}
+      .architecture{grid-template-columns:repeat(2,1fr)}
+      .arrow{transform:rotate(90deg);padding:2px}
+      .orb{width:250px;height:250px}
+      .orbit.one{width:310px;height:145px}.orbit.two{width:330px;height:190px}
+      .node{font-size:.7rem;padding:9px 10px}
+      .node.azure{right:0}.node.msp{left:0}
+      .form-row{grid-template-columns:1fr}
+      .hero-actions .btn{width:100%}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation:none!important;transition:none!important}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">◆ Remote IT <span>& MSP</span></a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Start a Project</a>
+      </div>
+      <a class="mobile-nav" href="#contact" aria-label="Start a project">→</a>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="kicker"><span class="dot"></span> REMOTE IT • CLOUD • MSP SERVICES</div>
+
+          <h1>Your remote IT engineer for projects, support & infrastructure.</h1>
+
+          <p class="lead">
+            Experienced remote infrastructure support for MSPs, businesses and technology teams.
+            I help with Azure, Microsoft 365, Windows infrastructure, security, RMM and technical
+            projects—without the cost of another full-time engineer.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Discuss Your IT Project →</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/abhisheksainiitguy/" target="_blank" rel="noopener noreferrer">View LinkedIn ↗</a>
+          </div>
+
+          <div class="proof-row">
+            <span class="proof">✓ Azure • AWS • Google Cloud</span>
+            <span class="proof">✓ Email & cloud migrations</span>
+            <span class="proof">✓ MSP / RMM experience</span>
+            <span class="proof">✓ Remote project delivery</span>
+            <span class="proof">✓ L2/L3 infrastructure support</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="orbit one"></div>
+          <div class="orbit two"></div>
+          <div class="orb"></div>
+          <div class="node azure">Azure / AVD</div>
+          <div class="node m365">Microsoft 365</div>
+          <div class="node msp">MSP / RMM</div>
+          <div class="node cloud">AWS • Google Cloud</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="metrics">
+          <div class="metric reveal"><strong>150+</strong><span>Projects completed</span></div>
+          <div class="metric reveal"><strong>10,000+</strong><span>Workstations supported</span></div>
+          <div class="metric reveal"><strong>1,500+</strong><span>Servers supported</span></div>
+          <div class="metric reveal"><strong>1,000+</strong><span>Firewalls supported</span></div>
+          <div class="metric reveal"><strong>2,000+</strong><span>Network switches supported</span></div>
+          <div class="metric reveal"><strong>2,500+</strong><span>Wireless access points</span></div>
+          <div class="metric reveal"><strong>2,000+</strong><span>POS systems</span></div>
+        </div>
+        <p class="small" style="margin-top:18px">
+          Approximate technology scale encountered across professional roles and client environments;
+          these figures are not presented as company-level or personally owned metrics.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">INFRASTRUCTURE IN ONE VIEW</span>
+          <h2>Cloud, network, security and endpoints—connected.</h2>
+          <p>From on-premises infrastructure to cloud services, I work across the layers that keep business environments running.</p>
+        </div>
+
+        <div class="architecture">
+          <div class="arch-card reveal"><strong>USERS</strong><span>Endpoints</span></div>
+          <div class="arch-card reveal"><strong>NETWORK</strong><span>Firewall • Switch</span></div>
+          <div class="arch-card reveal"><strong>SERVERS</strong><span>AD • VM • Backup</span></div>
+          <div class="arch-card reveal"><strong>MICROSOFT</strong><span>Azure • M365</span></div>
+          <div class="arch-card reveal"><strong>MULTI-CLOUD</strong><span>AWS • Google Cloud</span></div>
+          <div class="arch-card reveal"><strong>MSP / RMM</strong><span>Remote operations</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">WHY WORK WITH ME</span>
+          <h2>Extra engineering capacity without another full-time hire.</h2>
+          <p>A practical remote engineering model for teams that need technical work completed, documented and handed over cleanly.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card reveal"><strong>Remote-first delivery</strong><p>Work across distributed teams, MSPs and client environments.</p></div>
+          <div class="why-card reveal"><strong>Infrastructure + Cloud</strong><p>Cloud, Microsoft 365, Windows, networking, security and endpoints.</p></div>
+          <div class="why-card reveal"><strong>MSP experience</strong><p>Comfortable with RMM, NOC, escalation, ticketing and documentation workflows.</p></div>
+          <div class="why-card reveal"><strong>Project ownership</strong><p>Scope → execute → troubleshoot → document → handover.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">REMOTE IT PROJECTS</span>
+          <h2>Technical services built around your environment.</h2>
+          <p>Project-based, overflow and ongoing remote support—focused on getting the work done cleanly and documenting what changed.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal"><div class="card-icon">☁</div><h3>Cloud Infrastructure</h3><p>Azure, AWS and Google Cloud administration, troubleshooting and remediation.</p><ul><li>Azure VMs, networking & AVD</li><li>AWS compute, networking & cloud services</li><li>Google Cloud infrastructure support</li></ul></article>
+          <article class="card reveal"><div class="card-icon">▣</div><h3>Microsoft 365</h3><p>Administration and security work across Microsoft 365 and Entra ID environments.</p><ul><li>Entra ID & MFA</li><li>Conditional Access</li><li>Exchange / mail flow</li></ul></article>
+          <article class="card reveal"><div class="card-icon">⇄</div><h3>Cloud & Email Migrations</h3><p>Migration support for workloads, servers and email moving from legacy or on-premises environments.</p><ul><li>On-premises servers → cloud</li><li>Email / mailbox migrations</li><li>DNS, cutover & post-migration support</li></ul></article>
+          <article class="card reveal"><div class="card-icon">⌘</div><h3>Windows Infrastructure</h3><p>Hands-on administration for Windows Server and core infrastructure components.</p><ul><li>AD / GPO / DNS / DHCP</li><li>VMware / Hyper-V</li><li>DFS / WDS / MDT</li></ul></article>
+          <article class="card reveal"><div class="card-icon">◈</div><h3>MSP & RMM Support</h3><p>Remote L2/L3 engineering capacity for MSP teams and client environments.</p><ul><li>ConnectWise / N-central</li><li>Monitoring & remediation</li><li>Escalation & documentation</li></ul></article>
+          <article class="card reveal"><div class="card-icon">◉</div><h3>Security & Backup</h3><p>Practical support for endpoint security, backup, email security and recovery operations.</p><ul><li>Defender / SentinelOne</li><li>Veeam / Datto / Acronis</li><li>Backup & DR checks</li></ul></article>
+          <article class="card reveal"><div class="card-icon">@</div><h3>Domains, DNS & Web Setup</h3><p>Domain lifecycle and DNS support for business websites, email and cloud services.</p><ul><li>Domain registration & setup</li><li>DNS records & troubleshooting</li><li>SPF, DKIM & DMARC coordination</li></ul></article>
+          <article class="card reveal"><div class="card-icon">↗</div><h3>IT Projects</h3><p>Bring in an experienced engineer for a defined project, migration, remediation or backlog.</p><ul><li>Migration assistance</li><li>Infrastructure remediation</li><li>Technical backlog reduction</li></ul></article>
+          <article class="card reveal"><div class="card-icon">POS</div><h3>POS & Retail Technology</h3><p>Hands-on experience supporting POS environments across retail and hospitality technology.</p><ul><li>POS terminals & peripherals</li><li>Thermal printers & barcode devices</li><li>Network & endpoint troubleshooting</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">GOOD FIT FOR</span>
+          <h2>Projects I can help move forward.</h2>
+        </div>
+        <div class="project-grid">
+          <div class="project-card reveal"><strong>✓ Azure / Cloud Projects</strong><p>Infrastructure, networking, VMs, AVD and troubleshooting.</p></div>
+          <div class="project-card reveal"><strong>✓ Microsoft 365</strong><p>Identity, mail flow, security and administration.</p></div>
+          <div class="project-card reveal"><strong>✓ Migrations</strong><p>Email, domains, DNS, servers and cloud modernization.</p></div>
+          <div class="project-card reveal"><strong>✓ MSP Overflow</strong><p>Remote engineering capacity for technical backlogs and escalations.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">PROFESSIONAL EXPERIENCE</span>
+          <h2>Organizations & IT environments I've worked with.</h2>
+          <p>Experience across MSP, cloud, infrastructure and POS technology environments.</p>
+        </div>
+
+        <div class="company-grid">
+          <article class="company-card reveal">
+            <div class="company-logo-wrap">
+              <div class="company-wordmark">
+                <span class="brand-mark"><span class="brand-symbol blue">POS</span>POS Solutions</span>
+                <small>Retail & Hospitality Technology</small>
+              </div>
+            </div>
+            <div class="company-content">
+              <h3>POS Solutions</h3><span class="company-role">POS & Retail Technology</span>
+              <ul><li>POS terminals & receipt printers</li><li>Barcode scanners & mobility devices</li><li>Retail, F&B & hospitality technology</li><li>POS hardware/software troubleshooting</li></ul>
+              <a class="company-link" href="https://www.pos-india.com/" target="_blank" rel="noopener noreferrer">Company website ↗</a>
+            </div>
+          </article>
+
+          <article class="company-card reveal">
+            <div class="company-logo-wrap">
+              <div class="company-wordmark">
+                <span class="brand-mark"><span class="brand-symbol dark">RVS</span>RVS iGlobal</span>
+                <small>White Label IT Services</small>
+              </div>
+            </div>
+            <div class="company-content">
+              <h3>RVS iGlobal</h3><span class="company-role">MSP • NOC • Cloud Support</span>
+              <ul><li>24x7 NOC / managed support</li><li>Server & workstation support</li><li>Azure / Microsoft 365 environments</li><li>Monitoring & technical escalation</li></ul>
+              <a class="company-link" href="https://www.rvsiglobal.co.uk/" target="_blank" rel="noopener noreferrer">Company website ↗</a>
+            </div>
+          </article>
+
+          <article class="company-card reveal">
+            <div class="company-logo-wrap">
+              <div class="company-wordmark">
+                <span class="brand-mark"><span class="brand-symbol purple">TP</span>TechPIO</span>
+                <small>MSP Operations</small>
+              </div>
+            </div>
+            <div class="company-content">
+              <h3>TechPIO Services</h3><span class="company-role">RMM • NOC • Backup • MSP</span>
+              <ul><li>RMM & 24x7 NOC operations</li><li>Backup management</li><li>Microsoft 365 & Azure support</li><li>PowerShell / automation & patching</li></ul>
+              <a class="company-link" href="https://techpio.com/" target="_blank" rel="noopener noreferrer">Company website ↗</a>
+            </div>
+          </article>
+
+          <article class="company-card reveal">
+            <div class="company-logo-wrap">
+              <div class="company-wordmark">
+                <span class="brand-mark"><span class="brand-symbol green">7</span>Next7 IT</span>
+                <small>Managed IT & Projects</small>
+              </div>
+            </div>
+            <div class="company-content">
+              <h3>Next7 IT</h3><span class="company-role">Managed IT • Projects • Security</span>
+              <ul><li>Managed IT & help desk</li><li>Proactive monitoring & maintenance</li><li>Security & infrastructure projects</li><li>Technical consulting & project delivery</li></ul>
+              <a class="company-link" href="https://www.next7it.com/" target="_blank" rel="noopener noreferrer">Company website ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="disclaimer">
+          Company names and logos are used solely to identify organizations where I have professional experience and do not imply endorsement, partnership or affiliation.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">ENGAGEMENT OPTIONS</span>
+          <h2>Flexible support when you need extra capacity.</h2>
+          <p>Choose the engagement that fits the work—from a one-off technical task to ongoing remote engineering support.</p>
+        </div>
+
+        <div class="engagement-grid">
+          <div class="engagement-card reveal"><strong>01 · Fixed-Scope Project</strong><p>Defined technical task with clear scope and handover documentation.</p></div>
+          <div class="engagement-card reveal"><strong>02 · Hourly Technical Support</strong><p>Experienced engineering support for troubleshooting, administration or backlog work.</p></div>
+          <div class="engagement-card reveal"><strong>03 · MSP Overflow</strong><p>Remote L2/L3 engineering capacity without another full-time employee.</p></div>
+          <div class="engagement-card reveal"><strong>04 · Ongoing Support</strong><p>Recurring remote support for cloud, infrastructure or operational work.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">MIGRATIONS & MODERNIZATION</span>
+          <h2>Move the right workloads to the right cloud.</h2>
+          <p>Migration support covering email, domains, DNS, servers and cloud infrastructure—with practical cutover and post-migration support.</p>
+        </div>
+
+        <div class="migration">
+          <div class="mig-node reveal"><strong>ON-PREM</strong><p>Servers<br>AD / DNS<br>File Services</p></div>
+          <div class="arrow">→</div>
+          <div class="mig-node reveal"><strong>CLOUD</strong><p>Azure<br>AWS<br>Google Cloud</p></div>
+          <div class="arrow">→</div>
+          <div class="mig-node reveal"><strong>BUSINESS</strong><p>Microsoft 365<br>Email<br>Domains / DNS</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">NETWORK • SECURITY • POS</span>
+          <h2>Infrastructure that reaches the physical edge.</h2>
+          <p>Experience across firewalls, switches, wireless access points, endpoints and POS environments—not just cloud consoles.</p>
+        </div>
+
+        <div class="network">
+          <div class="reveal"><strong>Internet</strong><span class="small">Connectivity</span></div>
+          <div class="reveal"><strong>Firewall</strong><span class="small">Security</span></div>
+          <div class="reveal"><strong>Switching</strong><span class="small">LAN</span></div>
+          <div class="reveal"><strong>Wi-Fi</strong><span class="small">Wireless</span></div>
+        </div>
+
+        <div class="metrics">
+          <div class="metric reveal"><strong>10K+</strong><span>Workstations</span></div>
+          <div class="metric reveal"><strong>1.5K+</strong><span>Servers</span></div>
+          <div class="metric reveal"><strong>2.5K+</strong><span>WAPs</span></div>
+          <div class="metric reveal"><strong>2K+</strong><span>POS</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">PROJECT DELIVERY</span>
+          <h2>From technical backlog to completed project.</h2>
+          <p>Ideal for MSPs, small businesses and technology providers that need remote engineering capacity without adding a full-time position.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal"><span class="step-number">01 · SCOPE</span><h3>Define the outcome</h3><p>Share the environment, technical requirement, access constraints and desired outcome.</p></div>
+          <div class="step reveal"><span class="step-number">02 · EXECUTE</span><h3>Complete the work</h3><p>Work is delivered remotely with clear communication, troubleshooting and change tracking.</p></div>
+          <div class="step reveal"><span class="step-number">03 · DOCUMENT</span><h3>Hand over cleanly</h3><p>Receive practical notes covering what changed, what was resolved and what your team should monitor.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">WHO I HELP</span>
+          <h2>Remote engineering capacity for teams that need it.</h2>
+        </div>
+        <div class="audience-grid">
+          <div class="audience-card reveal"><strong>MSPs</strong><p>Additional engineering capacity, L2/L3 escalation support and help clearing technical backlogs.</p></div>
+          <div class="audience-card reveal"><strong>Small & Medium Businesses</strong><p>Experienced infrastructure support without the overhead of another full-time engineer.</p></div>
+          <div class="audience-card reveal"><strong>Technology Teams</strong><p>Remote infrastructure expertise for implementations, migrations, troubleshooting and technical projects.</p></div>
+          <div class="audience-card reveal"><strong>IT Providers</strong><p>Project execution and specialist capacity that can plug into existing delivery workflows.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">TECHNOLOGY</span>
+          <h2>Tools I work around.</h2>
+        </div>
+        <div class="tags reveal">
+          <span class="tag">Microsoft Azure</span><span class="tag">AWS</span><span class="tag">Google Cloud</span>
+          <span class="tag">Azure Virtual Desktop</span><span class="tag">Microsoft 365</span><span class="tag">Entra ID</span>
+          <span class="tag">Defender</span><span class="tag">Exchange Online</span><span class="tag">Windows Server</span>
+          <span class="tag">Active Directory</span><span class="tag">PowerShell</span><span class="tag">VMware</span>
+          <span class="tag">Hyper-V</span><span class="tag">ConnectWise</span><span class="tag">N-central</span>
+          <span class="tag">Kaseya</span><span class="tag">Datto</span><span class="tag">Veeam</span><span class="tag">Acronis</span>
+          <span class="tag">FortiGate</span><span class="tag">SentinelOne</span><span class="tag">ThreatLocker</span>
+          <span class="tag">Huntress</span><span class="tag">IT Glue</span><span class="tag">DNS / Domain Management</span>
+          <span class="tag">SPF / DKIM / DMARC</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">MICROSOFT CERTIFICATIONS</span>
+          <h2>Validated cloud & infrastructure credentials.</h2>
+          <p>Verified credentials covering Azure administration, Azure Virtual Desktop and foundational cloud concepts.</p>
+        </div>
+
+        <div class="certification-grid">
+          <article class="cert-card reveal">
+            <div class="cert-badge-area">
+              <div class="cert-badge"><span>MICROSOFT CERTIFIED</span><strong>AZ-104</strong><span>ASSOCIATE</span></div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-provider">MICROSOFT CERTIFIED</span>
+              <h3>Azure Administrator Associate</h3>
+              <p>Microsoft Certified: Azure Administrator Associate</p>
+              <a class="cert-link" href="https://learn.microsoft.com/en-in/users/abhisheksaini-6914/credentials/a04fc2a64547bf34" target="_blank" rel="noopener noreferrer">Verify Credential →</a>
+            </div>
+          </article>
+
+          <article class="cert-card reveal">
+            <div class="cert-badge-area">
+              <div class="cert-badge"><span>MICROSOFT CERTIFIED</span><strong>AZ-140</strong><span>SPECIALTY</span></div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-provider">MICROSOFT CERTIFIED</span>
+              <h3>Azure Virtual Desktop Specialty</h3>
+              <p>Microsoft Certified: Azure Virtual Desktop Specialty</p>
+              <a class="cert-link" href="https://learn.microsoft.com/en-in/users/abhisheksaini-6914/credentials/8c0c6b91a9ef4804" target="_blank" rel="noopener noreferrer">Verify Credential →</a>
+            </div>
+          </article>
+
+          <article class="cert-card reveal">
+            <div class="cert-badge-area">
+              <div class="cert-badge"><span>MICROSOFT CERTIFIED</span><strong>AZ-900</strong><span>FUNDAMENTALS</span></div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-provider">MICROSOFT CERTIFIED</span>
+              <h3>Azure Fundamentals</h3>
+              <p>Microsoft Certified: Azure Fundamentals</p>
+              <a class="cert-link" href="https://www.credly.com/badges/92f81d9b-626c-4b27-b17d-5aa721fc60cb/linked_in_profile" target="_blank" rel="noopener noreferrer">Verify Badge →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about">
+          <div class="about-card reveal">
+            <span class="eyebrow">ABOUT</span>
+            <h2>Remote Professional Services Engineer.</h2>
+            <p>
+              I’m Abhishek Saini, an IT infrastructure and cloud professional focused on practical
+              administration, troubleshooting and project delivery for businesses and MSPs.
+            </p>
+            <p>
+              My experience spans Microsoft Azure, AWS, Google Cloud, Azure Virtual Desktop,
+              Microsoft 365, Entra ID, Windows Server, virtualization, networking, domains/DNS,
+              email migrations, security, backup and MSP/RMM environments.
+            </p>
+            <p>
+              I work remotely with distributed teams and client environments, helping turn technical
+              requirements and backlogs into completed, documented outcomes.
+            </p>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/abhisheksainiitguy/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+          </div>
+
+          <div class="about-meta reveal">
+            <div><span>Focus</span><strong>Cloud • MSP • Infrastructure</strong></div>
+            <div><span>Engagement</span><strong>Remote • Project • Ongoing</strong></div>
+            <div><span>Availability</span><strong>Remote Projects & MSP Overflow</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">START A CONVERSATION</span>
+          <h2>Have an IT project you need to get done?</h2>
+          <p>Tell me what you're trying to accomplish, what environment you're working with and where you're stuck. I'll review the requirement and let you know how I can help.</p>
+        </div>
+
+        <div class="contact-wrap">
+          <div class="contact-card reveal">
+            <h3>Let's discuss the requirement.</h3>
+            <p>
+              Whether you're an MSP looking for overflow engineering capacity,
+              a business planning a migration, or a technology team working through
+              a technical backlog, send the requirement and expected outcome.
+            </p>
+
+            <div class="contact-list">
+              <a class="contact-item" href="mailto:abhisheksaini7171@gmail.com">
+                <strong>Email</strong>
+                <span>abhisheksaini7171@gmail.com</span>
+              </a>
+              <a class="contact-item" href="https://www.linkedin.com/in/abhisheksainiitguy/" target="_blank" rel="noopener noreferrer">
+                <strong>LinkedIn</strong>
+                <span>linkedin.com/in/abhisheksainiitguy</span>
+              </a>
+            </div>
+
+            <p class="small" style="margin-top:22px">
+              Found me through Reddit? Tell me the subreddit or post where you found this service
+              and briefly describe your IT requirement.
+            </p>
+          </div>
+
+          <div class="form-card reveal">
+            <form action="https://formsubmit.co/abhisheksaini7171@gmail.com" method="POST">
+
+              <input type="hidden" name="_subject" value="New IT Project Inquiry — Remote IT & MSP Services">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="true">
+              <input type="hidden" name="_next" value="https://abhisheksaini7171-lab.github.io/remote-it-msp-services/?submitted=true">
+
+              <div class="form-row">
+                <label>
+                  Name *
+                  <input type="text" name="name" autocomplete="name" required>
+                </label>
+
+                <label>
+                  Company / MSP
+                  <input type="text" name="company" autocomplete="organization">
+                </label>
+              </div>
+
+              <div class="form-row">
+                <label>
+                  Email *
+                  <input type="email" name="email" autocomplete="email" required>
+                </label>
+
+                <label>
+                  Preferred engagement
+                  <select name="engagement">
+                    <option value="">Select one</option>
+                    <option>Fixed-Scope Project</option>
+                    <option>Hourly Technical Support</option>
+                    <option>MSP Overflow</option>
+                    <option>Ongoing Support</option>
+                  </select>
+                </label>
+              </div>
+
+              <div>
+                <label>Environment / Services</label>
+                <div class="check-grid" style="margin-top:8px">
+                  <label class="check-option"><input type="checkbox" name="services[]" value="Azure"> Azure</label>
+                  <label class="check-option"><input type="checkbox" name="services[]" value="Microsoft 365"> Microsoft 365</label>
+                  <label class="check-option"><input type="checkbox" name="services[]" value="AWS"> AWS</label>
+                  <label class="check-option"><input type="checkbox" name="services[]" value="Google Cloud"> Google Cloud</label>
+                  <label class="check-option"><input type="checkbox" name="services[]" value="Windows"> Windows</label>
+                  <label class="check-option"><input type="checkbox" name="services[]" value="Networking"> Networking</label>
+                  <label class="check-option"><input type="checkbox" name="services[]" value="MSP / RMM"> MSP / RMM</label>
+                  <label class="check-option"><input type="checkbox" name="services[]" value="Migration"> Migration</label>
+                  <label class="check-option"><input type="checkbox" name="services[]" value="Security"> Security</label>
+                </div>
+              </div>
+
+              <label>
+                What do you need help with? *
+                <textarea name="message" required placeholder="Describe the project, environment, current issue and desired outcome."></textarea>
+              </label>
+
+              <label>
+                How did you find me?
+                <input type="text" name="source" placeholder="Reddit, LinkedIn, referral, OneUp, Google, etc.">
+              </label>
+
+              <button class="btn btn-primary" type="submit">Send Project Requirement →</button>
+
+              <p class="form-note">
+                This static GitHub Pages site uses FormSubmit to deliver form submissions to the email above.
+                Avoid sending passwords, credentials, API keys or other sensitive infrastructure secrets through this form.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 Remote IT & MSP Services — Abhishek Saini</div>
+      <div>Remote support • Cloud • Migrations • Infrastructure</div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.classList.add("reveal-ready");
+      const revealItems = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        revealItems.forEach(el => observer.observe(el));
+      } else {
+        revealItems.forEach(el => el.classList.add("visible"));
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener("click", function (event) {
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            event.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
+      if (new URLSearchParams(window.location.search).get("submitted") === "true") {
+        alert("Thank you. Your project requirement has been submitted.");
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+    });
+  </script>
+
+</body>
+</html>
