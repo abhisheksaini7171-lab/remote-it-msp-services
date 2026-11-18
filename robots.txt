@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://abhisheksaini7171-lab.github.io/remote-it-msp-services/sitemap.xml
+
+Sitemap: https://remote-it-msp-services.abhisheksaini7171.workers.dev/sitemap.xml
