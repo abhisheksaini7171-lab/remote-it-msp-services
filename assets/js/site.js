@@ -26,6 +26,17 @@ document.addEventListener("DOMContentLoaded",()=>{
     if(option)customerField.value=option.value;
   }
 
+  const engagement=params.get("engagement");
+  const engagementField=document.querySelector("#engagement");
+  if(engagementField&&engagement){
+    const wanted=engagement.toLowerCase();
+    const option=Array.from(engagementField.options).find(item=>
+      item.text.toLowerCase().includes(wanted) ||
+      (wanted==="discovery"&&item.text.toLowerCase().includes("not sure"))
+    );
+    if(option)engagementField.value=option.value;
+  }
+
   const service=params.get("service");
   if(service){
     const wanted=service.toLowerCase();
