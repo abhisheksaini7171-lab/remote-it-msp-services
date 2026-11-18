@@ -45,9 +45,44 @@ document.addEventListener("DOMContentLoaded",()=>{
   }
 
   const reducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Premium scroll progress and compact sticky-header treatment.
+  const progress=document.createElement("div");
+  progress.className="scroll-progress";
+  progress.setAttribute("role","progressbar");
+  progress.setAttribute("aria-label","Page scroll progress");
+  progress.setAttribute("aria-valuemin","0");
+  progress.setAttribute("aria-valuemax","100");
+  progress.setAttribute("aria-valuenow","0");
+  document.body.appendChild(progress);
+  const header=document.querySelector(".site-header");
+  let scrollTick=false;
+  const updateScrollUI=()=>{
+    const maxScroll=document.documentElement.scrollHeight-window.innerHeight;
+    const value=maxScroll>0?Math.min(100,Math.round((window.scrollY/maxScroll)*100)):0;
+    progress.style.width=value+"%";
+    progress.setAttribute("aria-valuenow",String(value));
+    if(header)header.classList.toggle("is-scrolled",window.scrollY>18);
+    scrollTick=false;
+  };
+  window.addEventListener("scroll",()=>{
+    if(!scrollTick){window.requestAnimationFrame(updateScrollUI);scrollTick=true;}
+  },{passive:true});
+  updateScrollUI();
+
+  // Subtle pointer-following light, not a custom cursor.
+  if(!reducedMotion&&window.matchMedia("(pointer: fine)").matches){
+    document.querySelectorAll(".hero-panel,.card,.audience,.step,.info-panel,.form-panel").forEach(panel=>{
+      panel.addEventListener("pointermove",event=>{
+        const rect=panel.getBoundingClientRect();
+        panel.style.setProperty("--spot-x",(event.clientX-rect.left)+"px");
+        panel.style.setProperty("--spot-y",(event.clientY-rect.top)+"px");
+      },{passive:true});
+    });
+  }
   if(!reducedMotion&&"IntersectionObserver" in window){
     document.body.classList.add("reveal-ready");
-    const targets=document.querySelectorAll(".section-head,.card,.audience,.step,.band,.tags,.info-panel,.form-panel");
+    const targets=document.querySelectorAll(".section-head,.card,.audience,.step,.band,.tags,.info-panel,.form-panel,.page-hero");
     targets.forEach((element,index)=>{
       element.classList.add("reveal");
       if(element.classList.contains("card")||element.classList.contains("step")){
