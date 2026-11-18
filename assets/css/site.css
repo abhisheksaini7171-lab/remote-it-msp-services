@@ -179,3 +179,15 @@ input:focus,select:focus,textarea:focus{background:#091a30;box-shadow:0 0 0 4px 
  .reveal-ready .hero-grid>div:first-child>*{opacity:1;animation:none}
  .button:after,.nav-cta:after{display:none}
 }
+
+
+/* Conversion-focused engagement cards and accessible FAQ disclosure */
+.faq-list{display:grid;gap:12px;max-width:900px}
+.faq-list details{border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.035);padding:18px 20px}
+.faq-list summary{cursor:pointer;color:var(--text);font-weight:800;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary:after{content:"+";color:var(--blue);font-size:1.35rem;line-height:1}
+.faq-list details[open] summary:after{content:"−"}
+.faq-list details p{color:var(--muted);margin:13px 0 2px;max-width:780px}
+.card .note{color:var(--soft);font-size:.78rem}
+@media(prefers-reduced-motion:reduce){.faq-list details{scroll-behavior:auto}}
